@@ -1,0 +1,30 @@
+//Question: Write a program to input two numbers and display their sum, difference, product, and quotient.
+
+#include <stdio.h>
+
+int main() {
+    float a, b;  
+
+    // Asking to input two numbers
+    printf("Enter first number:");
+    scanf("%f", &a);
+
+    printf("Enter second number:");
+    scanf("%f", &b);
+
+    // Display output
+    printf("Sum = %f", a + b);
+    printf("\nDifference = %f", a - b);
+    printf("\nProduct = %f", a * b);
+
+    if (b == 0)
+    {
+        printf("\nDivision is undefined.");
+    }
+    else
+    {
+        printf("\nQuotient = %f", a/b);
+    };
+    
+    return 0;
+}
