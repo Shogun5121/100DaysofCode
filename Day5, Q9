@@ -1,0 +1,30 @@
+//Question: Write a program to calculate Simple and Compound interest
+
+#include <stdio.h>
+
+int main() {
+    double principle, rate, Simple_Interest, Temp, Compound_Interest;
+    int time_period, i;
+    printf("Enter the value of principle:");
+    scanf("%lf", &principle);
+
+    printf("Enter the rate:");
+    scanf("%lf", &rate);
+
+    printf("Enter the time period in years:");
+    scanf("%d", &time_period);
+
+    Simple_Interest = (principle*rate*time_period)/100.0;
+
+    Temp = 1;
+
+    for(i=1; i<=time_period; i++)
+    {
+        Temp = Temp * (1+rate/100.0);
+    };
+    
+    Compound_Interest = principle*Temp - principle;
+
+    printf("Simple Interest = %lf\nCompound Interest = %lf", Simple_Interest, Compound_Interest);
+    return 0;
+}
