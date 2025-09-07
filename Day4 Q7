@@ -13,9 +13,9 @@ int main() {
 
     printf("\nBefore swapping: a = %d, b = %d\n", a, b);
     
-    a = 3*(a*b);
+    a = a-b;
     b = a+b;
-    a = b;
+    a = b-a;
 
     printf("After swapping: a = %d, b = %d", a, b);
 
